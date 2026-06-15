@@ -16,6 +16,14 @@ app.post("/test",async(req,res)=>{
     method:"POST",
     headers:{
       "Content-Type":"application/json",
-    }
-  }
+      Authorization:"application/json",
+    },
+    body: JSON.stringify({
+      model:"gpt-4o-mini",
+      messages:[{
+        role:"user",
+        content:req.body.message
+      }]
+    })
+  };
 })
