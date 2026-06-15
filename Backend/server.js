@@ -1,13 +1,21 @@
-import OpenAI from 'openai';
-import 'dotenv/config';
+import express from "express";
+import "dotenv/config";
+import cors frmo "cors";
 
-const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
+const app=express();
+const PORT=8080;
+
+app.use(express.json())
+app.use(cors())
+app.listen(PORT,()=>{
+  console.log("Server Running on $(PORT)");
 });
 
-const response = await client.responses.create({
-    model: 'gpt-4o-mini',
-    input:'Joke related to Computer Science',
-});
-
-console.log(response.output_text);
+app.post("/test",async(req,res)=>{
+  const options={
+    method:"POST",
+    headers:{
+      "Content-Type":"application/json",
+    }
+  }
+})
