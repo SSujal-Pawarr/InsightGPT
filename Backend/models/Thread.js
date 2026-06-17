@@ -16,3 +16,25 @@ const MessageSchema= new mongoose.Schema({
     }
 
 });
+
+const ThreadSchema= new mongoose.Schema({
+    ThreadId:{
+        type:String,
+        required:true,
+        unique:true
+    },
+    title:{
+        type:String
+        default:"New Chat"
+    },
+    messages:[MessageSchema],
+    createdAt:{
+        type:Date, 
+        default:Date.now
+    }
+    updatedAt:{
+        type:Date, 
+        default:Date.now
+    }
+
+});
