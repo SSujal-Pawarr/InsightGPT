@@ -1,6 +1,6 @@
 import express from "express";
 import "dotenv/config";
-import cors frmo "cors";
+import cors from "cors";
 
 const app=express();
 const PORT=8080;
@@ -16,7 +16,7 @@ app.post("/test",async(req,res)=>{
     method:"POST",
     headers:{
       "Content-Type":"application/json",
-      Authorization:"application/json",
+      "Authorization":`Bearer ${process.env.OPENAI_API_KEY}`
     },
     body: JSON.stringify({
       model:"gpt-4o-mini",
@@ -26,4 +26,13 @@ app.post("/test",async(req,res)=>{
       }]
     })
   };
+
+  try{
+    const response= await fetch("https://api.openai.com/v1/chat/completions",optional);
+    const data=await response.json();
+    res.send(data.choices[0].message.content);
+  }catch(err){
+    console.log(err);
+    
+  }
 })
