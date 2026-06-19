@@ -18,7 +18,7 @@ const MessageSchema= new mongoose.Schema({
 });
 
 const ThreadSchema= new mongoose.Schema({
-    ThreadId:{
+    threadId:{
         type:String,
         required:true,
         unique:true

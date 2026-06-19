@@ -13,7 +13,7 @@ app.use(cors())
 app.use("/api",chatRoutes);
 
 app.listen(PORT,()=>{
-  console.log("Server Running on $(PORT)");
+  console.log(`Server Running on ${PORT}`);
   connectDB();
 });
  
