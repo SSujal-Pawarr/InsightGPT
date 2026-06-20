@@ -20,4 +20,21 @@ router.post("/test",async(requestAnimationFrame,res)=>{
     }
 });
 
+//Get all threads
+
+router.get("/thread",async(req,res)=>{
+     try{
+        const threads =(await Thread.find({})).Sorted({updatedAt:-1});
+        // descending order of updatedAt... most recent data on top
+        res.json(threads);
+     }catch(err){
+        console.log(err);
+        res.status(500).json({error:"Failed to fetch threads"});
+        
+     }
+     
+})
+
+
+
 export default router;
