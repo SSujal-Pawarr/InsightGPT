@@ -28,6 +28,10 @@ button {
     object-fit: cover;
 }
 
+button:hover {
+    background-color: rgba(180, 180, 180, 0.05);
+}
+
 .history {
     margin: 10px;
     padding: 10px;
