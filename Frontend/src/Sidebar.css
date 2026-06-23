@@ -54,3 +54,10 @@ button:hover {
     background-color: rgba(180, 180, 180, 0.05);
     border-radius: 10px;
 }
+.sign {
+    padding: 10px;
+    margin: 10px;
+    font-size: 14px;
+    text-align: center;
+    border-top: solid 0.25px rgba(255, 255, 255, 0.5);
+}
