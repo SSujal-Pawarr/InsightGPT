@@ -49,3 +49,8 @@ button:hover {
     border: solid 10px transparent;
     position: relative;
 }
+
+.history li:hover {
+    background-color: rgba(180, 180, 180, 0.05);
+    border-radius: 10px;
+}
