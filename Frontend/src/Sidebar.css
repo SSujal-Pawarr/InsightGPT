@@ -27,6 +27,9 @@ button {
     border-radius: 50%;
     object-fit: cover;
 }
+button span {
+    font-size: 20px;
+}
 
 button:hover {
     background-color: rgba(180, 180, 180, 0.05);
