@@ -2,8 +2,7 @@ import "./ChatWindow.css";
 import Chat from "./Chat.jsx";
 
 function ChatWindow() {
-    return{
-       return (
+    return (
         <div className="chatWindow">
             <div className="navbar">
                 <span>SigmaGPT <i className="fa-solid fa-chevron-down"></i></span>
@@ -36,12 +35,12 @@ function ChatWindow() {
                     <div id="submit" onClick={getReply}><i className="fa-solid fa-paper-plane"></i></div>
                 </div>
                 <p className="info">
-                    SigmaGPT can make mistakes. Check important info. See Cookie Preferences.
+                    InsightGPT can make mistakes. Check important info. See Cookie Preferences.
                 </p>
             </div>
         </div>
     )
-    }
+    
     
 }
 
