@@ -1,10 +1,9 @@
 import "./Chat.css";
 
 function Chat() {
-    return{
+    return (
        <></>
-    }
-    
+    );
 }
 
 export default Chat;
