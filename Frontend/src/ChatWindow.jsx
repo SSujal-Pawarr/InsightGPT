@@ -39,7 +39,7 @@ function ChatWindow() {
         }
         setLoading(false);
     }
-        //Append new chat to prevChats
+    //Append new chat to prevChats
     useEffect(() => {
         if(prompt && reply) {
             setPrevChats(prevChats => (
