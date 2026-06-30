@@ -1,6 +1,7 @@
 import "./Chat.css";
 import React, { useContext, useState, useEffect } from "react";
-
+import ReactMarkdown from "react-markdown";
+import rehypeHighlight from "rehype-highlight";
 function Chat() {
         const {newChat, prevChats, reply} = useContext(MyContext);
 
