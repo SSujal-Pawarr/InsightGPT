@@ -29,6 +29,8 @@ function Chat() {
         return () => clearInterval(interval);
 
     }, [prevChats, reply])
+
+    
     return (
        <>
         {newChat && <h1>Start a New Chat!</h1>}
